@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 # "Y" Symbol with label 1
 y_symbol = (1, np.array([
