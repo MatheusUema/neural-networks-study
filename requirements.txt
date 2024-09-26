@@ -4,3 +4,5 @@ pandas
 torch
 ucimlrepo
 scikit-learn
+keras
+tensorflow
