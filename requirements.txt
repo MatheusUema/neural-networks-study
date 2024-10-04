@@ -6,3 +6,6 @@ ucimlrepo
 scikit-learn
 keras
 tensorflow
+opencv-python-headless
+Pillow
+pydot==1.4.2

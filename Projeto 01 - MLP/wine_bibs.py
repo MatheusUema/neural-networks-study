@@ -27,18 +27,18 @@ def create_model(layers, neurons_per_layer, input_dim, output_dim, learning_rate
     model = Sequential()
     
     # Input layer and first middle layer
-    model.add(Dense(neurons_per_layer[0], input_dim=input_dim, activation='relu'))
+    model.add(Dense(neurons_per_layer[0], input_dim=input_dim, activation='sigmoid'))
 
     # Optional second middle layer
     if len(layers) > 1:
-        model.add(Dense(neurons_per_layer[1], activation='relu'))
+        model.add(Dense(neurons_per_layer[1], activation='sigmoid'))
 
     # Output layer with softmax for classification
     model.add(Dense(output_dim, activation='softmax'))
 
     # Model compiling SGD (gradient descent) e momentum
     sgd = SGD(learning_rate=learning_rate, momentum=momentum)
-    model.compile(optimizer=sgd, loss='categorical_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=sgd, loss='mse', metrics=['accuracy'])
     
     return model
 
